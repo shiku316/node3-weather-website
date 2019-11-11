@@ -1,20 +1,7 @@
-console.log("client side Javascript file is loaded")
-
-fetch('http://puzzle.mead.io/puzzle').then((response)=>{
-    response.json().then((data)=>{
-        console.log(data)
-    })
-})
-
-
-
 const weatherform = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
-
-
-
 
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
@@ -36,4 +23,3 @@ weatherform.addEventListener('submit',(e)=>{
     })
 
 })
-
