@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast')
 
 //express config
 const app = express()
+const port = process.env.PORT || 3000
+
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname , "../templates/views")
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -17,7 +19,7 @@ hbs.registerPartials(partialsPath)
 
 //setup static directory
 app.use(express.static(publicDirectoryPath))
-const port = process.env.PORT || 3000
+
 
 app.get('', (req,res) =>{
     res.render('index',{
